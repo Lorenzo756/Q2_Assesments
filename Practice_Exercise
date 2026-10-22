@@ -1,0 +1,159 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOYaacGkWL+MlfhhZ1AQ1Rc",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Lorenzo756/Q2_Assesments/blob/main/Practice_Exercise\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "nw_sjulqLBC-",
+        "outputId": "dadaab9a-b1cd-4099-b80c-48c066b97063"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter temperature in Celsius: 25\n",
+            "Temperature in Fahrenheit: 77.0 °F\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Exercise 1\n",
+        "def celsius_to_fahrenheit(celsius):\n",
+        "   fahrenheit = (celsius * 9/5) + 32\n",
+        "   return fahrenheit\n",
+        "\n",
+        "temperature =  float(input(\"Enter temperature in Celsius: \"))\n",
+        "result = celsius_to_fahrenheit(temperature)\n",
+        "print(f\"Temperature in Fahrenheit: {result} °F\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercise 2\n",
+        "def get_traffic_action(color):\n",
+        "    color = color.lower()\n",
+        "    if color == \"red\":\n",
+        "        return \"Stop\"\n",
+        "    elif color == \"yellow\":\n",
+        "        return \"Slow down and prepare to stop\"\n",
+        "    elif color == \"green\":\n",
+        "        return \"Proceed when safe\"\n",
+        "    else:\n",
+        "        return \"Invalid traffic light color.\"\n",
+        "\n",
+        "\n",
+        "traffic_color = input(\"Enter traffic light color: \")\n",
+        "action = get_traffic_action(traffic_color)\n",
+        "\n",
+        "print(\"Action:\", action)"
+      ],
+      "metadata": {
+        "id": "gha2I7tqNJjk",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "a6c65137-2553-4e27-cc76-ae723e73d7d5"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter traffic light color: RED\n",
+            "Action: Stop\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Exercise 3\n",
+        "def get_pshs_grade(raw_grade):\n",
+        "    if raw_grade < 0 or raw_grade > 100:\n",
+        "        return \"Invalid raw grade.\"\n",
+        "    elif raw_grade >= 96:\n",
+        "        return 1.00\n",
+        "    elif raw_grade >= 90:\n",
+        "        return 1.25\n",
+        "    elif raw_grade >= 84:\n",
+        "        return 1.50\n",
+        "    elif raw_grade >= 78:\n",
+        "        return 1.75\n",
+        "    elif raw_grade >= 72:\n",
+        "        return 2.00\n",
+        "    elif raw_grade >= 66:\n",
+        "        return 2.25\n",
+        "    elif raw_grade >= 60:\n",
+        "        return 2.50\n",
+        "    elif raw_grade >= 55:\n",
+        "        return 2.75\n",
+        "    elif raw_grade >= 50:\n",
+        "        return 3.00\n",
+        "    elif raw_grade >= 40:\n",
+        "        return 4.00\n",
+        "    else:\n",
+        "        return 5.00\n",
+        "\n",
+        "\n",
+        "raw_grade = float(input(\"Enter raw grade: \"))\n",
+        "equivalent = get_pshs_grade(raw_grade)\n",
+        "\n",
+        "if isinstance(equivalent, str):\n",
+        "    print(equivalent)\n",
+        "else:\n",
+        "    print(f\"Equivalent PSHS grade: {equivalent:.2f}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BQuFhiHsPJQS",
+        "outputId": "cbd596e2-ef2c-4bd8-9d28-354fecf8a6b0"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter raw grade: 87.645\n",
+            "Equivalent PSHS grade: 1.50\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
